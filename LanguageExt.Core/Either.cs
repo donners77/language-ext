@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using LanguageExt;
-using LanguageExt.Prelude;
+using static LanguageExt.Prelude;
 using System.Collections.Immutable;
 
 namespace LanguageExt
@@ -39,12 +38,6 @@ namespace LanguageExt
             new Either<L, R>(value);
 
         internal static Either<L, R> Left(L value) => 
-            new Either<L, R>(value);
-
-        internal static Either<L, R> RightUnsafe(R value) =>
-            new Either<L, R>(value);
-
-        internal static Either<L, R> LeftUnsafe(L value) =>
             new Either<L, R>(value);
 
         public bool IsRight =>
